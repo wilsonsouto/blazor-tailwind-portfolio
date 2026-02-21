@@ -1,0 +1,12 @@
+﻿@if (Type == TextType.Paragraph)
+{
+    <p aria-label="@AriaLabel" class="@AddClasses()">
+        @Title
+    </p>
+}
+else if (Type == TextType.List)
+{
+    <li aria-label="@AriaLabel" class="@AddClasses()">
+        @Title
+    </li>
+}

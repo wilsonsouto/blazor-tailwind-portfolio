@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="src/BlazorTailwindPortfolio.Client/BlazorTailwindPortfolio.Client.csproj" />
+  <Project Path="src/BlazorTailwindPortfolio.Domain/BlazorTailwindPortfolio.Domain.csproj" Id="69cec457-2da3-4727-ae2c-4113545ea842" />
 </Solution>

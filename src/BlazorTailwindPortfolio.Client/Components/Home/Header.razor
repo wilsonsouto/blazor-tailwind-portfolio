@@ -14,7 +14,7 @@
                         Url=@Identity.Location.Url
                         IsBold="false" />
         <nav aria-label="Contact link">
-            <ul class="flex gap-1.5">
+            <ul class="text-foreground/80 flex gap-1">
                 @foreach (var contact in @Identity.Contact)
                 {
                     @if (contact.DisplayOptions.VisibleOnPrint)
@@ -30,7 +30,7 @@
                         else if (contact.Type.Equals(ContactType.Button))
                         {
                             <li class="print:hidden">
-                                <button aria-label="@contact.Label" class="inline-flex size-8 cursor-pointer items-center justify-center rounded-md border border-neutral-200 hover:bg-neutral-100">
+                                <button aria-label="@contact.Label" @onclick="PrintWindow" class="inline-flex size-8 cursor-pointer items-center justify-center rounded-md border border-neutral-200 hover:bg-neutral-100">
                                     <i class="@contact.Icon"></i>
                                 </button>
                             </li>
@@ -59,6 +59,13 @@
 
 @code {
 
+    [Inject] private IJSRuntime JS { get; set; } = default!;
+
     [Parameter] public Identity Identity { get; set; } = default!;
+
+    private void PrintWindow()
+    {
+        JS.InvokeVoidAsync("print");
+    }
 
 }

@@ -1,5 +1,67 @@
-﻿<h1 class="font-bold not-print:text-accent not-print:text-2xl print:text-foreground print:text-3xl">@Title</h1>
+﻿@if (Size == TextSize.XXl)
+{
+    <h1 class=@AddClasses>@Title</h1>
+}
+else if (Size == TextSize.Xl)
+{
+    <h2 class=@AddClasses>@Title</h2>
+}
+else
+{
+    <h3 class=@AddClasses>@Title</h3>
+}
 
 @code {
-    [Parameter] public string Title { get; set; } = string.Empty;
+
+    [EditorRequired][Parameter] public string Title { get; set; } = string.Empty;
+    [EditorRequired][Parameter] public string AriaLabel { get; set; } = string.Empty;
+    [EditorRequired][Parameter] public TextSize Size { get; set; }
+
+    [Parameter] public PrintStyle Style { get; set; } = PrintStyle.None;
+    [Parameter] public HeadingVariant Variant { get; set; } = HeadingVariant.Accent;
+    [Parameter] public PrintVisibility Visibility { get; set; } = PrintVisibility.Visible;
+
+    private string AddClasses =>
+        $"font-bold print:text-foreground {GetSize()} {GetVariant()} {GetPrintStyle()} {GetPrintVisibility()}";
+
+    private string GetSize() => Size switch
+    {
+        TextSize.Md => "text-base",
+        TextSize.Xl => "text-xl",
+        TextSize.XXl => "text-2xl",
+        _ => throw new ArgumentOutOfRangeException(nameof(Size), Size, "Invalid text size")
+    };
+
+    private string GetVariant() => Variant switch
+    {
+        HeadingVariant.Accent => "text-accent",
+        _ => "text-foreground"
+    };
+
+    private string GetPrintStyle() => Style switch
+    {
+        PrintStyle.Divider =>
+            "print:border-b-[1px] print:border-black print:uppercase print:tracking-wider print:text-lg",
+
+        PrintStyle.Header =>
+            "print:text-3xl",
+
+        _ => string.Empty
+    };
+
+    private string GetPrintVisibility() =>
+        Visibility == PrintVisibility.Hidden ? "print:hidden" : "screen:block";
+
+    public enum HeadingVariant
+    {
+        Default,
+        Accent
+    }
+
+    public enum PrintStyle
+    {
+        None,
+        Divider,
+        Header
+    }
 }

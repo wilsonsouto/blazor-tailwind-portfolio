@@ -1,10 +1,13 @@
 ﻿<header class="grid w-full grid-cols-[1fr_auto] gap-3 print:grid-cols-1">
     <section class="grid grid-cols-1 gap-1.5 print:place-items-center">
-        <SectionHeading Title=@Identity.Name />
+        <SectionHeading Title=@Identity.Name
+                        AriaLabel="Header Section"
+                        Size="TextSize.XXl"
+                        Style="SectionHeading.PrintStyle.Header"/>
         <TextElement Title=@Identity.Description
                      AriaLabel=@Identity.Description
                      Element="TextElement.ElementType.Paragraph"
-                     Print="TextElement.PrintVisibility.Hidden"/>
+                     Visibility="PrintVisibility.Hidden" />
         <NavigationLink Title=@Identity.Location.Place
                         AriaLabel=@Identity.Location.Place
                         Url=@Identity.Location.Url

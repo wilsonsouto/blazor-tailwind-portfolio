@@ -1,8 +1,15 @@
-﻿<SectionHeading Title="About" />
+﻿<SectionHeading Title="About"
+                AriaLabel="About Section"
+                Size="TextSize.Xl"
+                Style="SectionHeading.PrintStyle.Divider"
+                Visibility="PrintVisibility.Hidden" />
 <TextElement Title="@Introduction"
              AriaLabel="@Introduction"
-             Element="TextElement.ElementType.Paragraph"/>
+             Element="TextElement.ElementType.Paragraph"
+             Visibility="PrintVisibility.Hidden" />
 
 @code {
+
     [EditorRequired][Parameter] public string Introduction { get; set; } = default!;
+
 }

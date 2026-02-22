@@ -20,9 +20,9 @@ else if (Element == ElementType.ListItem)
     [Parameter] public MaxWidth Width { get; set; } = MaxWidth.Full;
     [Parameter] public FontWeight Weight { get; set; } = FontWeight.Normal;
     [Parameter] public TextVariant Variant { get; set; } = TextVariant.Default;
-    [Parameter] public PrintVisibility Print { get; set; } = PrintVisibility.Visible;
-    [Parameter] public PaddingOption Padding { get; set; } = PaddingOption.None;
     [Parameter] public TextContext Context { get; set; } = TextContext.Default;
+    [Parameter] public PaddingOption Padding { get; set; } = PaddingOption.None;
+    [Parameter] public PrintVisibility Visibility { get; set; } = PrintVisibility.Visible;
 
     private string AddClasses =>
         $"text-pretty print:text-foreground {GetWidth()} {GetSize()} {GetPadding()} {GetWeight()} {GetVariant()} {GetPrintVisibility()} {GetContext()}";
@@ -53,7 +53,7 @@ else if (Element == ElementType.ListItem)
     };
 
     private string GetPrintVisibility() =>
-        Print == PrintVisibility.Hidden ? "print:hidden" : "screen:block";
+        Visibility == PrintVisibility.Hidden ? "print:hidden" : "screen:block";
 
     private string GetPadding() => Padding switch
     {
@@ -80,12 +80,6 @@ else if (Element == ElementType.ListItem)
         Default,
         Muted,
         Highlighted
-    }
-
-    public enum PrintVisibility
-    {
-        Visible,
-        Hidden
     }
 
     public enum PaddingOption

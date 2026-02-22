@@ -1,0 +1,72 @@
+﻿{
+  "identity": {
+    "name": "Wilson Souto",
+    "description": "Software Developer focused on generating value by solving problems and building solutions",
+    "location": {
+      "place": "São Paulo, SP, Brazil",
+      "url": "https://www.google.com/maps/place/S%C3%A3o+Paulo"
+    },
+    "contact": [
+      {
+        "label": "Portfolio",
+        "url": "https://wilsonsouto.github.io/portfolio/",
+        "icon": "fa-solid fa-briefcase",
+        "type": 0,
+        "displayOptions": {
+          "visibleOnPrint": false,
+          "visibleOnScreen": true
+        }
+      },
+      {
+        "label": "Email",
+        "url": "mailto:wilsonsouto@outlook.com.br",
+        "icon": "fa-solid fa-envelope",
+        "type": 0,
+        "displayOptions": {
+          "visibleOnPrint": true,
+          "visibleOnScreen": true
+        }
+      },
+      {
+        "label": "Mobile",
+        "url": "tel:+5511941862376",
+        "icon": "fa-solid fa-phone",
+        "type": 0,
+        "displayOptions": {
+          "visibleOnPrint": false,
+          "visibleOnScreen": false
+        }
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/wilsonsouto",
+        "icon": "fa-brands fa-github",
+        "type": 0,
+        "displayOptions": {
+          "visibleOnPrint": true,
+          "visibleOnScreen": true
+        }
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://linkedin.com/in/wilsonsouto",
+        "icon": "fa-brands fa-linkedin-in",
+        "type": 0,
+        "displayOptions": {
+          "visibleOnPrint": true,
+          "visibleOnScreen": true
+        }
+      },
+      {
+        "label": "Resume",
+        "icon": "fa-solid fa-file-pdf",
+        "type": 1,
+        "displayOptions": {
+          "visibleOnPrint": true,
+          "visibleOnScreen": false
+        }
+      }
+    ],
+    "profilePicture": "images/profile-picture.jpeg"
+  }
+}

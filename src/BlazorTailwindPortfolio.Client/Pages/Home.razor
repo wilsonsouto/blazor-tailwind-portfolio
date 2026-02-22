@@ -1,3 +1,21 @@
 ﻿@page "/"
+@inject HttpClient Http
 
-<Header/>
+@if (_profile is not null)
+{
+    <Header Identity="@_profile.Identity" />
+}
+else
+{
+    <p>Loading...</p>
+}
+
+
+@code {
+    private Profile? _profile;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _profile = await Http.GetFromJsonAsync<Profile>("data/profile.json");
+    }
+}

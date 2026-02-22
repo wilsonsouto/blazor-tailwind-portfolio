@@ -1,29 +1,64 @@
 ﻿<header class="grid w-full grid-cols-[1fr_auto] gap-3 print:grid-cols-1">
     <section class="grid grid-cols-1 gap-1.5 print:place-items-center">
-        <SectionTitle Title="Wilson Souto" />
-        <TextElement Title="Software Developer focused on generating value by solving problems and building solutions"
-                     AriaLabel="Software Developer focused on generating value by solving problems and building solutions"
+        <SectionTitle Title=@Identity.Name />
+        <TextElement Title=@Identity.Description
+                     AriaLabel=@Identity.Description
                      Type="TextType.Paragraph"
                      Size="TextSize.Base"
                      Width="TextWidth.Medium"
                      VisibleOnPrint="false"
                      HasBackgroundColor="false"
                      IsBold="false" />
-        <NavigationLink Title="São Paulo, SP, Brazil"
-                        AriaLabel="Location: São Paulo, SP, Brazil"
-                        Url="https://www.google.com/maps/place/S%C3%A3o+Paulo"
-                        IsBold="false"/>
-        <nav>
-            <ul class="flex flex-wrap gap-1">
-                <li>Email</li>
-                <li>Cellphone</li>
-                <li>Github</li>
-                <li>LinkedIn</li>
-                <li>Resume</li>
+        <NavigationLink Title=@Identity.Location.Place
+                        AriaLabel=@Identity.Location.Place
+                        Url=@Identity.Location.Url
+                        IsBold="false" />
+        <nav aria-label="Contact link">
+            <ul class="flex gap-1.5">
+                @foreach (var contact in @Identity.Contact)
+                {
+                    @if (contact.DisplayOptions.VisibleOnPrint)
+                    {
+                        @if (contact.Type.Equals(ContactType.List))
+                        {
+                            <li class="print:hidden">
+                                <a aria-label="@contact.Label" class="inline-flex size-8 items-center justify-center rounded-md border border-neutral-200 hover:bg-neutral-100" target="_blank" href="@contact.Url">
+                                    <i class="@contact.Icon"></i>
+                                </a>
+                            </li>
+                        }
+                        else if (contact.Type.Equals(ContactType.Button))
+                        {
+                            <li class="print:hidden">
+                                <button aria-label="@contact.Label" class="inline-flex size-8 cursor-pointer items-center justify-center rounded-md border border-neutral-200 hover:bg-neutral-100">
+                                    <i class="@contact.Icon"></i>
+                                </button>
+                            </li>
+                        }
+                    }
+
+                    @if (contact.DisplayOptions.VisibleOnScreen)
+                    {
+                        <li class="mr-2 not-print:hidden">
+                            <a class="flex items-center gap-1.5"
+                               href="@contact.Url"
+                               target="_blank">
+                                <i class="@contact.Icon"></i>
+                                <span class="underline">@contact.Label</span>
+                            </a>
+                        </li>
+                    }
+                }
             </ul>
         </nav>
     </section>
     <picture class="flex size-28 h-full shrink-0 items-start overflow-hidden rounded-xl print:hidden">
-        <img class="block aspect-square h-full w-full object-cover" src="images/profile.jpeg" alt="Profile picture of Wilson Souto" />
+        <img class="block aspect-square h-full w-full object-cover" src=@Identity.ProfilePicture alt="Profile picture of Wilson Souto" />
     </picture>
 </header>
+
+@code {
+
+    [Parameter] public Identity Identity { get; set; } = default!;
+
+}

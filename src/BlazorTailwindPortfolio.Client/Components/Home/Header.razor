@@ -14,7 +14,7 @@
                         Url=@Identity.Location.Url
                         IsBold="false" />
         <nav aria-label="Contact link">
-            <ul class="text-foreground/80 flex gap-1">
+            <ul class="flex gap-1 not-print:text-foreground/80 print:text-foreground">
                 @foreach (var contact in @Identity.Contact)
                 {
                     @if (contact.DisplayOptions.VisibleOnPrint)

@@ -10,8 +10,7 @@
                      Visibility="PrintVisibility.Hidden" />
         <NavigationLink Title=@Identity.Location.Place
                         AriaLabel=@Identity.Location.Place
-                        Url=@Identity.Location.Url
-                        IsBold="false" />
+                        Url=@Identity.Location.Url/>
         <nav aria-label="Contact links">
             <ul class="flex gap-1 not-print:text-foreground/80 print:text-foreground">
                 @foreach (var contact in @Identity.ContactLinks)

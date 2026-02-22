@@ -18,11 +18,11 @@ else
     [EditorRequired][Parameter] public TextSize Size { get; set; }
 
     [Parameter] public PrintStyle Style { get; set; } = PrintStyle.None;
-    [Parameter] public HeadingVariant Variant { get; set; } = HeadingVariant.Accent;
+    [Parameter] public TextColor Color { get; set; } = TextColor.Accent;
     [Parameter] public PrintVisibility Visibility { get; set; } = PrintVisibility.Visible;
 
     private string AddClasses =>
-        $"font-bold print:text-foreground {GetSize()} {GetVariant()} {GetPrintStyle()} {GetPrintVisibility()}";
+        $"font-bold print:text-foreground {GetSize()} {GetColor()} {GetStyle()} {GetVisibility()}";
 
     private string GetSize() => Size switch
     {
@@ -32,13 +32,13 @@ else
         _ => throw new ArgumentOutOfRangeException(nameof(Size), Size, "Invalid text size")
     };
 
-    private string GetVariant() => Variant switch
+    private string GetColor() => Color switch
     {
-        HeadingVariant.Accent => "text-accent",
+        TextColor.Accent => "text-accent",
         _ => "text-foreground"
     };
 
-    private string GetPrintStyle() => Style switch
+    private string GetStyle() => Style switch
     {
         PrintStyle.Divider =>
             "print:border-b-[1px] print:border-black print:uppercase print:tracking-wider print:text-lg",
@@ -49,14 +49,8 @@ else
         _ => string.Empty
     };
 
-    private string GetPrintVisibility() =>
+    private string GetVisibility() =>
         Visibility == PrintVisibility.Hidden ? "print:hidden" : "screen:block";
-
-    public enum HeadingVariant
-    {
-        Default,
-        Accent
-    }
 
     public enum PrintStyle
     {

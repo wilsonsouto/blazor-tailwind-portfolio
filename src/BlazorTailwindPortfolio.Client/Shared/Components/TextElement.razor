@@ -25,7 +25,7 @@ else if (Element == ElementType.ListItem)
     [Parameter] public PrintVisibility Visibility { get; set; } = PrintVisibility.Visible;
 
     private string AddClasses =>
-        $"text-pretty print:text-foreground {GetWidth()} {GetSize()} {GetPadding()} {GetWeight()} {GetVariant()} {GetPrintVisibility()} {GetContext()}";
+        $"text-pretty print:text-foreground {GetWidth()} {GetSize()} {GetPadding()} {GetWeight()} {GetVariant()} {GetVisibility()} {GetContext()}";
 
     private string GetSize() => Size switch
     {
@@ -52,7 +52,7 @@ else if (Element == ElementType.ListItem)
         _ => "text-foreground"
     };
 
-    private string GetPrintVisibility() =>
+    private string GetVisibility() =>
         Visibility == PrintVisibility.Hidden ? "print:hidden" : "screen:block";
 
     private string GetPadding() => Padding switch

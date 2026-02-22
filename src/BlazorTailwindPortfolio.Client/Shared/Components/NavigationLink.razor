@@ -1,25 +1,61 @@
-﻿<a target="_blank" href="@Url" aria-label="@AriaLabel" class="@AddClasses()">
+﻿<a href="@Url"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="@AriaLabel"
+   class="@AddClasses">
+
     @Title
+
     <span class="print:hidden">
-        <i class="fa-solid fa-arrow-up h-4 w-4 rotate-45 text-xs group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
+        <i class="fa-solid fa-arrow-up h-4 w-4 rotate-45 text-xs
+                  group-hover:translate-x-0.5
+                  group-hover:-translate-y-0.5">
+        </i>
     </span>
+
 </a>
 
 @code {
 
-    [EditorRequired] [Parameter] public string Title { get; set; } = string.Empty;
-    
-    [EditorRequired] [Parameter] public string AriaLabel { get; set; } = string.Empty;
+    [EditorRequired][Parameter] public string Title { get; set; } = string.Empty;
+    [EditorRequired][Parameter] public string AriaLabel { get; set; } = string.Empty;
+    [EditorRequired][Parameter] public string Url { get; set; } = string.Empty;
 
-    [EditorRequired] [Parameter] public string Url { get; set; } = string.Empty;
+    [Parameter] public TextSize Size { get; set; } = TextSize.Md;
+    [Parameter] public FontWeight Weight { get; set; } = FontWeight.Normal;
+    [Parameter] public TextColor Color { get; set; } = TextColor.Default;
+    [Parameter] public PrintBehavior Print { get; set; } = PrintBehavior.Underline;
 
-    [EditorRequired] [Parameter] public bool IsBold { get; set; }
+    private string AddClasses =>
+        $"group hover:underline {GetSize()} {GetWeight()} {GetColor()} {GetPrint()}";
 
-    
-    private string AddClasses()
+    private string GetSize() => Size switch
     {
-        var isBold = IsBold ? "font-bold" : "font-normal";
+        TextSize.Sm => "text-sm",
+        TextSize.Md => "text-base",
+        TextSize.Lg => "text-lg",
+        _ => throw new ArgumentOutOfRangeException(nameof(Size), Size, "Invalid text size")
+    };
 
-        return $"group text-base hover:underline print:underline print:hover:no-underline {isBold}";
+    private string GetWeight() =>
+        Weight == FontWeight.Bold ? "font-bold" : "font-normal";
+
+    private string GetColor() => Color switch
+    {
+        TextColor.Accent => "text-accent",
+        _ => "text-foreground"
+    };
+
+    private string GetPrint() => Print switch
+    {
+        PrintBehavior.None => string.Empty,
+        PrintBehavior.Underline => "print:underline print:hover:no-underline",
+        _ => "print:underline"
+    };
+
+    public enum PrintBehavior
+    {
+        None,
+        Underline
     }
 }

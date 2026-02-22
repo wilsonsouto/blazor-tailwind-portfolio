@@ -1,4 +1,4 @@
-﻿namespace BlazorTailwindPortfolio.Domain.Enums
+﻿namespace BlazorTailwindPortfolio.Client.Features.Home.Enums
 {
     public enum ContactType
     {

@@ -1,0 +1,16 @@
+﻿<SectionHeading Title="About" />
+<TextElement Title="@Introduction"
+             AriaLabel=@Introduction
+             Type="TextType.Paragraph"
+             Size="TextSize.Base"
+             Width="TextWidth.Full"
+             VisibleOnPrint="false"
+             HasBackgroundColor="false"
+             IsBold="false" />
+
+
+@code {
+
+    [EditorRequired][Parameter] public string Introduction { get; set; } = default!;
+
+}

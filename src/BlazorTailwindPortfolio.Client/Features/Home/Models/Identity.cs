@@ -1,6 +1,6 @@
-﻿using BlazorTailwindPortfolio.Domain.Enums;
+﻿using BlazorTailwindPortfolio.Client.Features.Home.Enums;
 
-namespace BlazorTailwindPortfolio.Domain.ValueObjects
+namespace BlazorTailwindPortfolio.Client.Features.Home.Models
 {
     public record Identity(string Name, string Description, Location Location, List<ContactLinks> ContactLinks, string ProfilePicture);
 

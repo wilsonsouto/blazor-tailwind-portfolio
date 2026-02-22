@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 
-namespace BlazorTailwindPortfolio.Client.Components.Shared
+namespace BlazorTailwindPortfolio.Client.Shared.Components
 {
     public partial class TextElement
     {

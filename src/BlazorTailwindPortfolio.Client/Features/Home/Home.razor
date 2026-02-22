@@ -1,5 +1,5 @@
 ﻿@page "/"
-@inject HttpClient Http
+@inject IJsonDataService JsonDataService
 
 @if (_profile is not null)
 {
@@ -21,6 +21,6 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        _profile = await Http.GetFromJsonAsync<Profile>("data/profile.json");
+        _profile = await JsonDataService.LoadAsync<Profile>("data/profile.json");
     }
 }

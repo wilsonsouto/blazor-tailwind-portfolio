@@ -6,7 +6,7 @@
       "place": "São Paulo, SP, Brazil",
       "url": "https://www.google.com/maps/place/S%C3%A3o+Paulo"
     },
-    "contact": [
+    "contactLinks": [
       {
         "label": "Portfolio",
         "url": "https://wilsonsouto.github.io/portfolio/",

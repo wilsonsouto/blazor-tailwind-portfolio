@@ -4,15 +4,15 @@ namespace BlazorTailwindPortfolio.Client.Components.Shared
 {
     public partial class TextElement
     {
-        [Parameter] public string Title { get; set; } = string.Empty;
-        [Parameter] public string AriaLabel { get; set; } = string.Empty;
-        [Parameter] public TextType Type { get; set; }
-        [Parameter] public TextSize Size { get; set; }
-        [Parameter] public TextWidth Width { get; set; }
+        [EditorRequired] [Parameter] public string Title { get; set; } = string.Empty;
+        [EditorRequired] [Parameter] public string AriaLabel { get; set; } = string.Empty;
+        [EditorRequired] [Parameter] public TextType Type { get; set; }
+        [EditorRequired] [Parameter] public TextSize Size { get; set; }
+        [EditorRequired] [Parameter] public TextWidth Width { get; set; }
+        [EditorRequired] [Parameter] public bool VisibleOnPrint { get; set; }
+        [EditorRequired] [Parameter] public bool IsBold { get; set; }
+        [EditorRequired] [Parameter] public bool HasBackgroundColor { get; set; }
         [Parameter] public TextPadding? Padding { get; set; }
-        [Parameter] public bool IsBold { get; set; }
-        [Parameter] public bool HasBackgroundColor { get; set; }
-        [Parameter] public bool VisibleOnPrint { get; set; }
 
         private string AddClasses()
         {

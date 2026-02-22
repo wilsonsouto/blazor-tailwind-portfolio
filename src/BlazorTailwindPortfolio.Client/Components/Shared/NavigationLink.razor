@@ -1,0 +1,25 @@
+﻿<a target="_blank" href="@Url" aria-label="@AriaLabel" class="@AddClasses()">
+    @Title
+    <span class="print:hidden">
+        <i class="fa-solid fa-arrow-up h-4 w-4 rotate-45 text-xs group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
+    </span>
+</a>
+
+@code {
+
+    [EditorRequired] [Parameter] public string Title { get; set; } = string.Empty;
+    
+    [EditorRequired] [Parameter] public string AriaLabel { get; set; } = string.Empty;
+
+    [EditorRequired] [Parameter] public string Url { get; set; } = string.Empty;
+
+    [EditorRequired] [Parameter] public bool IsBold { get; set; }
+
+    
+    private string AddClasses()
+    {
+        var isBold = IsBold ? "font-bold" : "font-normal";
+
+        return $"group text-base hover:underline print:underline print:hover:no-underline {isBold}";
+    }
+}

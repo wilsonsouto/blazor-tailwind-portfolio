@@ -3,12 +3,8 @@
         <SectionHeading Title=@Identity.Name />
         <TextElement Title=@Identity.Description
                      AriaLabel=@Identity.Description
-                     Type="TextType.Paragraph"
-                     Size="TextSize.Base"
-                     Width="TextWidth.Medium"
-                     VisibleOnPrint="false"
-                     HasBackgroundColor="false"
-                     IsBold="false" />
+                     Element="TextElement.ElementType.Paragraph"
+                     Print="TextElement.PrintVisibility.Hidden"/>
         <NavigationLink Title=@Identity.Location.Place
                         AriaLabel=@Identity.Location.Place
                         Url=@Identity.Location.Url

@@ -1,12 +1,109 @@
-﻿@if (Type == TextType.Paragraph)
+﻿@if (Element == ElementType.Paragraph)
 {
-    <p aria-label="@AriaLabel" class="@AddClasses()">
+    <p aria-label="@AriaLabel" class="@AddClasses">
         @Title
     </p>
 }
-else if (Type == TextType.List)
+else if (Element == ElementType.ListItem)
 {
-    <li aria-label="@AriaLabel" class="@AddClasses()">
+    <li aria-label="@AriaLabel" class="@AddClasses">
         @Title
     </li>
+}
+
+@code {
+    [EditorRequired][Parameter] public string Title { get; set; } = string.Empty;
+    [EditorRequired][Parameter] public string AriaLabel { get; set; } = string.Empty;
+    [EditorRequired][Parameter] public ElementType Element { get; set; }
+
+    [Parameter] public TextSize Size { get; set; } = TextSize.Md;
+    [Parameter] public MaxWidth Width { get; set; } = MaxWidth.Full;
+    [Parameter] public FontWeight Weight { get; set; } = FontWeight.Normal;
+    [Parameter] public TextVariant Variant { get; set; } = TextVariant.Default;
+    [Parameter] public PrintVisibility Print { get; set; } = PrintVisibility.Visible;
+    [Parameter] public PaddingOption Padding { get; set; } = PaddingOption.None;
+    [Parameter] public TextContext Context { get; set; } = TextContext.Default;
+
+    private string AddClasses =>
+        $"text-pretty print:text-foreground {GetWidth()} {GetSize()} {GetPadding()} {GetWeight()} {GetVariant()} {GetPrintVisibility()} {GetContext()}";
+
+    private string GetSize() => Size switch
+    {
+        TextSize.Xs => "text-xs",
+        TextSize.Sm => "text-sm",
+        TextSize.Md => "text-base",
+        _ => throw new ArgumentOutOfRangeException(nameof(Size), Size, "Invalid text size")
+    };
+
+    private string GetWidth() => Width switch
+    {
+        MaxWidth.Md => "max-w-md",
+        MaxWidth.Full => "max-w-full",
+        _ => "max-w-full"
+    };
+
+    private string GetWeight() =>
+        Weight == FontWeight.Bold ? "font-bold" : "font-normal";
+
+    private string GetVariant() => Variant switch
+    {
+        TextVariant.Highlighted => "border border-transparent bg-neutral-200 rounded-md text-center text-foreground",
+        TextVariant.Muted => "text-foreground/80",
+        _ => "text-foreground"
+    };
+
+    private string GetPrintVisibility() =>
+        Print == PrintVisibility.Hidden ? "print:hidden" : "screen:block";
+
+    private string GetPadding() => Padding switch
+    {
+        PaddingOption.Sm => "px-1 py-0",
+        PaddingOption.Md => "px-2 py-1",
+        _ => "p-0"
+    };
+
+    private string GetContext() => Context switch
+    {
+        TextContext.Date => "print:text-sm",
+        _ => "print:text-base"
+    };
+
+
+    public enum ElementType
+    {
+        Paragraph,
+        ListItem
+    }
+
+    public enum TextVariant
+    {
+        Default,
+        Muted,
+        Highlighted
+    }
+
+    public enum PrintVisibility
+    {
+        Visible,
+        Hidden
+    }
+
+    public enum PaddingOption
+    {
+        None,
+        Sm,
+        Md
+    }
+
+    public enum MaxWidth
+    {
+        Md,
+        Full
+    }
+
+    public enum TextContext
+    {
+        Default,
+        Date
+    }
 }

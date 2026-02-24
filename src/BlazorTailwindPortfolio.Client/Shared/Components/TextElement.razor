@@ -1,10 +1,10 @@
-﻿@if (Element == ElementType.Paragraph)
+﻿@if (Type == ElementType.Paragraph)
 {
     <p aria-label="@AriaLabel" class="@AddClasses">
         @Title
     </p>
 }
-else if (Element == ElementType.ListItem)
+else if (Type == ElementType.ListItem)
 {
     <li aria-label="@AriaLabel" class="@AddClasses">
         @Title
@@ -14,12 +14,12 @@ else if (Element == ElementType.ListItem)
 @code {
     [EditorRequired][Parameter] public string Title { get; set; } = string.Empty;
     [EditorRequired][Parameter] public string AriaLabel { get; set; } = string.Empty;
-    [EditorRequired][Parameter] public ElementType Element { get; set; }
+    [EditorRequired][Parameter] public ElementType Type { get; set; }
 
     [Parameter] public TextSize Size { get; set; } = TextSize.Md;
     [Parameter] public MaxWidth Width { get; set; } = MaxWidth.Full;
     [Parameter] public FontWeight Weight { get; set; } = FontWeight.Normal;
-    [Parameter] public TextVariant Variant { get; set; } = TextVariant.Default;
+    [Parameter] public TextColor Color { get; set; } = TextColor.Muted;
     [Parameter] public TextContext Context { get; set; } = TextContext.Default;
     [Parameter] public PaddingOption Padding { get; set; } = PaddingOption.None;
     [Parameter] public PrintVisibility Visibility { get; set; } = PrintVisibility.Visible;
@@ -45,11 +45,11 @@ else if (Element == ElementType.ListItem)
     private string GetWeight() =>
         Weight == FontWeight.Bold ? "font-bold" : "font-normal";
 
-    private string GetVariant() => Variant switch
+    private string GetVariant() => Color switch
     {
-        TextVariant.Highlighted => "border border-transparent bg-neutral-200 rounded-md text-center text-foreground",
-        TextVariant.Muted => "text-foreground/80",
-        _ => "text-foreground"
+        TextColor.Highlighted => "border border-transparent bg-neutral-200 rounded-md text-center text-foreground",
+        TextColor.Muted => "text-foreground/80",
+        _ => "text-foreground",
     };
 
     private string GetVisibility() =>
@@ -68,14 +68,13 @@ else if (Element == ElementType.ListItem)
         _ => "print:text-base"
     };
 
-
     public enum ElementType
     {
         Paragraph,
         ListItem
     }
 
-    public enum TextVariant
+    public enum TextColor
     {
         Default,
         Muted,

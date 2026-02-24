@@ -6,8 +6,9 @@
                         Style="SectionHeading.PrintStyle.Header"/>
         <TextElement Title=@Identity.Description
                      AriaLabel=@Identity.Description
-                     Element="TextElement.ElementType.Paragraph"
-                     Visibility="PrintVisibility.Hidden" />
+                     Type="TextElement.ElementType.Paragraph"
+                     Visibility="PrintVisibility.Hidden"
+                     Width="TextElement.MaxWidth.Md"/>
         <NavigationLink Title=@Identity.Location.Place
                         AriaLabel=@Identity.Location.Place
                         Url=@Identity.Location.Url/>

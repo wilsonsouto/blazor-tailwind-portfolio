@@ -1,4 +1,6 @@
-﻿@if (Size == TextSize.XXl)
+﻿@inherits BaseComponent;
+
+@if (Size == TextSize.XXl)
 {
     <h1 class=@AddClasses>@Title</h1>
 }
@@ -13,8 +15,6 @@ else
 
 @code {
 
-    [EditorRequired][Parameter] public string Title { get; set; } = string.Empty;
-    [EditorRequired][Parameter] public string AriaLabel { get; set; } = string.Empty;
     [EditorRequired][Parameter] public TextSize Size { get; set; }
 
     [Parameter] public PrintStyle Style { get; set; } = PrintStyle.None;

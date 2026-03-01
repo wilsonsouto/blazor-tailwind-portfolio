@@ -1,4 +1,6 @@
-﻿<a href="@Url"
+﻿@inherits BaseComponent;
+
+<a href="@Url"
    target="_blank"
    rel="noopener noreferrer"
    aria-label="@AriaLabel"
@@ -16,11 +18,7 @@
 </a>
 
 @code {
-
-    [EditorRequired][Parameter] public string Title { get; set; } = string.Empty;
-    [EditorRequired][Parameter] public string AriaLabel { get; set; } = string.Empty;
     [EditorRequired][Parameter] public string Url { get; set; } = string.Empty;
-
     [Parameter] public TextSize Size { get; set; } = TextSize.Md;
     [Parameter] public FontWeight Weight { get; set; } = FontWeight.Normal;
     [Parameter] public TextColor Color { get; set; } = TextColor.Default;

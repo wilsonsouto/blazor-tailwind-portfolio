@@ -1,4 +1,6 @@
-﻿@if (Type == ElementType.Paragraph)
+﻿@inherits BaseComponent;
+
+@if (Type == ElementType.Paragraph)
 {
     <p aria-label="@AriaLabel" class="@AddClasses">
         @Title
@@ -12,8 +14,6 @@ else if (Type == ElementType.ListItem)
 }
 
 @code {
-    [EditorRequired][Parameter] public string Title { get; set; } = string.Empty;
-    [EditorRequired][Parameter] public string AriaLabel { get; set; } = string.Empty;
     [EditorRequired][Parameter] public ElementType Type { get; set; }
 
     [Parameter] public TextSize Size { get; set; } = TextSize.Md;

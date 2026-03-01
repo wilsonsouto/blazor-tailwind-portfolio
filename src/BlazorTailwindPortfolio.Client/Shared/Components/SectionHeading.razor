@@ -2,15 +2,15 @@
 
 @if (Size == TextSize.XXl)
 {
-    <h1 class=@AddClasses>@Title</h1>
+    <h1 aria-label="@AriaLabel" class=@AddClasses>@Title</h1>
 }
 else if (Size == TextSize.Xl)
 {
-    <h2 class=@AddClasses>@Title</h2>
+    <h2 aria-label="@AriaLabel" class=@AddClasses>@Title</h2>
 }
 else
 {
-    <h3 class=@AddClasses>@Title</h3>
+    <h3 aria-label="@AriaLabel" class=@AddClasses>@Title</h3>
 }
 
 @code {

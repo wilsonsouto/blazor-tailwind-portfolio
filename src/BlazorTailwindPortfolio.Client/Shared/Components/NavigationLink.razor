@@ -25,7 +25,7 @@
     [Parameter] public PrintBehavior Print { get; set; } = PrintBehavior.Underline;
 
     private string AddClasses =>
-        $"group hover:underline {GetSize()} {GetWeight()} {GetColor()} {GetPrint()}";
+        $"group w-fit hover:underline {GetSize()} {GetWeight()} {GetColor()} {GetPrint()}";
 
     private string GetSize() => Size switch
     {

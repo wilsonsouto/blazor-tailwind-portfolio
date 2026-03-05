@@ -1,4 +1,4 @@
 ﻿namespace BlazorTailwindPortfolio.Client.Features.Home.Models
 {
-    public record Profile(Identity Identity, string Introduction);
+    public record Profile(Identity Identity, string Introduction, List<WorkExperience> WorkExperiences);
 }

@@ -69,5 +69,110 @@
     ],
     "profilePicture": "images/profile-picture.jpeg"
   },
-  "introduction": "Software Developer focused on generating value by solving problems and building solutions. Strong communication, continuous learning, and teamwork skills. Experience in sectors such as technology consulting, AI, and finance — driving business success."
+  "introduction": "Software Developer focused on generating value by solving problems and building solutions. Strong communication, continuous learning, and teamwork skills. Experience in sectors such as technology consulting, AI, and finance — driving business success.",
+  "workExperiences": [
+    {
+      "company": {
+        "name": "BTG Pactual",
+        "url": "https://www.btgpactual.com/"
+      },
+      "role": "Mid Level Software Developer",
+      "duration": {
+        "shortDate": "2025 - Present",
+        "longDate": "Apr 2025 - Present"
+      },
+      "responsabilities": [
+        "Worked in the Collateral OTC team, managing collateralized asset replication, derivatives imports (swaps, options, NDFs), and margin and box calculations.",
+        "Migrated legacy systems to a modern stack with .NET 8, refactored into microservices, and deployed on cloud infrastructure to increase scalability and resilience.",
+        "Developed and maintained workflows for stocks, funds, government and corporate bonds, supporting accurate collateral management across custodians.",
+        "Collaborated with operations to troubleshoot issues, prioritize demands by business impact, and enhance collateral processes."
+      ],
+      "stacks": [
+        "C#",
+        ".NET",
+        "ASP.NET Core",
+        "SOLID",
+        "Clean Architecture",
+        "Microservices",
+        "Event-Driven",
+        "CQRS",
+        "MySQL",
+        "Redis",
+        "RabbitMQ",
+        "AWS SQS/SNS",
+        "Docker",
+        "Kubernetes",
+        "AWS Lambda Functions"
+      ],
+      "display": {
+        "screen": true,
+        "print": true
+      }
+    },
+    {
+      "company": {
+        "name": "Intervalor",
+        "url": "https://intervalor.com.br/"
+      },
+      "role": "Junior Software Developer",
+      "duration": {
+        "shortDate": "2023 - 2025",
+        "longDate": "May 2023 - Abr 2025"
+      },
+      "responsabilities": [
+        "Developed AI-powered chatbots with ASP.NET Core and the OpenAI API, automating user interactions and integrating workflows.",
+        "Built and maintained internal and external RESTful APIs, enabling secure and reliable system integration.",
+        "Optimized RabbitMQ message handling, reducing dead-letter queue bottlenecks by 60%, improving responsiveness and efficiency.",
+        "Implemented CI/CD pipelines with Jenkins and Docker, streamlining deployments and boosting scalability."
+      ],
+      "stacks": [
+        "C#",
+        ".NET",
+        "ASP.NET Core",
+        "SOLID",
+        "Clean Architecture",
+        "MySQL",
+        "Redis",
+        "RabbitMQ",
+        "Docker",
+        "Kubernetes",
+        "Jenkins",
+        "Grafana",
+        "Kibana"
+      ],
+      "display": {
+        "screen": true,
+        "print": true
+      }
+    },
+    {
+      "company": {
+        "name": "IBM",
+        "url": "https://www.ibm.com/us-en"
+      },
+      "role": "Software Developer Intern",
+      "duration": {
+        "shortDate": "2021 - 2022",
+        "longDate": "Aug 2021 - Dec 2022"
+      },
+      "responsabilities": [
+        "Contributed to applications using IBM Watson Assistant, IBM Cloud, and IBM Storage.",
+        "Built software components in C#, applying object-oriented principles for clarity and scalability.",
+        "Implemented CRUD operations and improved data management with SQL Server and Entity Framework Core in ASP.NET Core.",
+        "Collaborated in Agile sprints, gaining hands-on experience in planning, execution, and code reviews."
+      ],
+      "stacks": [
+        "C#",
+        ".NET",
+        "ASP.NET Core",
+        "SQL Server",
+        "HTML",
+        "CSS"
+      ],
+      "display": {
+        "screen": true,
+        "print": true
+      }
+    }
+  ]
 }

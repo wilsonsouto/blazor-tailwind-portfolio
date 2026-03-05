@@ -1,0 +1,69 @@
+﻿<SectionContainer Visibility="PrintVisibility.Visible">
+    <SectionHeading Title="Work Experience"
+                    AriaLabel="Work Experience Section"
+                    Size="TextSize.Xl"
+                    Style="SectionHeading.PrintStyle.Divider"
+                    Visibility="PrintVisibility.Visible" />
+    @foreach (var experience in WorkExperiences)
+    {
+        <article class="flex flex-col gap-1.5">
+            <header class="flex flex-col items-start">
+                <div class="grid w-full grid-cols-[1fr_auto] place-items-baseline gap-3">
+                    <SectionHeading Title=@experience.Role
+                                    AriaLabel=@experience.Role
+                                    Size="TextSize.Md"
+                                    Style="SectionHeading.PrintStyle.None"
+                                    Visibility="PrintVisibility.Visible"
+                                    Color="TextColor.Default" />
+                    <span class="hidden sm:block">
+                        <TextElement Title="@experience.Duration.LongDate"
+                                     AriaLabel="@experience.Duration.LongDate"
+                                     Type="TextElement.ElementType.Paragraph"
+                                     Visibility="PrintVisibility.Visible"
+                                     Size="TextSize.Sm"
+                                     Context="TextElement.TextContext.Date" />
+                    </span>
+
+                    <span class="block sm:hidden print:hidden">
+                        <TextElement Title="@experience.Duration.ShortDate"
+                                     AriaLabel="@experience.Duration.ShortDate"
+                                     Type="TextElement.ElementType.Paragraph"
+                                     Visibility="PrintVisibility.Visible"
+                                     Size="TextSize.Sm"
+                                     Context="TextElement.TextContext.Date" />
+                    </span>
+                </div>
+            </header>
+            <NavigationLink Title=@experience.Company.Name
+                            AriaLabel=@experience.Company.Name
+                            Url=@experience.Company.Url />
+            <ul class="list-inside list-disc">
+                @foreach (var responsibility in experience.Responsabilities)
+                {
+                    <TextElement Title=@responsibility
+                                 AriaLabel=@responsibility
+                                 Type="TextElement.ElementType.ListItem"
+                                 Visibility="PrintVisibility.Visible"
+                                 Size="TextSize.Sm" />
+                }
+            </ul>
+            <ul class="flex flex-grow list-none flex-wrap gap-1 print:hidden">
+                @foreach (var stack in experience.Stacks)
+                {
+                    <TextElement Title=@stack
+                                 AriaLabel=@stack
+                                 Type="TextElement.ElementType.ListItem"
+                                 Visibility="PrintVisibility.Visible"
+                                 Size="TextSize.Xs"
+                                 Color="TextElement.TextColor.Highlighted"
+                                 Padding="TextElement.PaddingOption.Md"
+                                 Weight="FontWeight.Bold" />
+                }
+            </ul>
+        </article>
+    }
+</SectionContainer>
+
+@code {
+    [EditorRequired][Parameter] public List<WorkExperience> WorkExperiences { get; set; } = default!;
+}

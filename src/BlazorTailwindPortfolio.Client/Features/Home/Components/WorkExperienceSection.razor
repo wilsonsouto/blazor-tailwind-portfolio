@@ -33,10 +33,10 @@
                                      Context="TextElement.TextContext.Date" />
                     </span>
                 </div>
-            </header>
             <NavigationLink Title=@experience.Company.Name
                             AriaLabel=@experience.Company.Name
                             Url=@experience.Company.Url />
+            </header>
             <ul class="list-inside list-disc">
                 @foreach (var responsibility in experience.Responsabilities)
                 {

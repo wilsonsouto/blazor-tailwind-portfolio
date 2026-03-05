@@ -1,0 +1,15 @@
+﻿<section class=@AddClasses>
+    @ChildContent
+</section>
+
+@code {
+    [EditorRequired] [Parameter] public PrintVisibility Visibility { get; set; }
+
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    
+    private string AddClasses =>
+    $"flex flex-col gap-3 {GetVisibility()}";
+
+    private string GetVisibility() =>
+        Visibility == PrintVisibility.Hidden ? "print:hidden" : "screen:block";
+}

@@ -47,7 +47,7 @@ else if (Type == ElementType.ListItem)
 
     private string GetVariant() => Color switch
     {
-        TextColor.Highlighted => "border border-transparent bg-neutral-200 rounded-md text-center text-foreground",
+        TextColor.Highlighted => "grow border border-transparent bg-neutral-200 rounded-md text-center text-foreground",
         TextColor.Muted => "text-foreground/80",
         _ => "text-foreground",
     };

@@ -3,10 +3,10 @@
 
 @if (_profile is not null)
 {
-    <Header Identity="@_profile.Identity" />
+    <HeaderSection Identity="@_profile.Identity" />
     <main class="flex min-h-0 flex-col gap-10">
-        <About Introduction="@_profile.Introduction" />
-        <Experience WorkExperiences="@_profile.WorkExperiences" />
+        <AboutSection Introduction="@_profile.Introduction" />
+        <WorkExperienceSection WorkExperiences="@_profile.WorkExperiences" />
     </main>
 }
 else

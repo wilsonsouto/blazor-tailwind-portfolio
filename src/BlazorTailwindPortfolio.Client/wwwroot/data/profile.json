@@ -69,7 +69,7 @@
     ],
     "profilePicture": "images/profile-picture.jpeg"
   },
-  "introduction": "Software Developer focused on generating value by solving problems and building solutions. Strong communication, continuous learning, and teamwork skills. Experience in sectors such as technology consulting, AI, and finance — driving business success.",
+  "introduction": "Software Developer focused on delivering value by solving problems and building solutions. Strong communication, continuous learning, and teamwork skills. Experience in technology consulting, AI, and finance — driving business success.",
   "workExperiences": [
     {
       "company": {
@@ -82,27 +82,41 @@
         "longDate": "Apr 2025 - Present"
       },
       "responsabilities": [
-        "Worked in the Collateral OTC team, managing collateralized asset replication, derivatives imports (swaps, options, NDFs), and margin and box calculations.",
-        "Migrated legacy systems to a modern stack with .NET 8, refactored into microservices, and deployed on cloud infrastructure to increase scalability and resilience.",
-        "Developed and maintained workflows for stocks, funds, government and corporate bonds, supporting accurate collateral management across custodians.",
-        "Collaborated with operations to troubleshoot issues, prioritize demands by business impact, and enhance collateral processes."
+        "Developed and maintained systems for the Collateral OTC team, including collateral asset allocation and withdrawal, derivatives processing (swaps, options, NDFs), and margin and box calculations — handling over 28K daily trade positions.",
+        "Migrated 80% of legacy systems to .NET 8, refactoring into microservices and deploying on cloud infrastructure, significantly reducing system failures and increasing scalability and resilience.",
+        "Built and supported workflows for stocks, funds, government and corporate bonds, ensuring accurate collateral management and regulatory compliance across custodians.",
+        "Collaborated with operations to troubleshoot issues and prioritize demands by business impact, reducing bugs and optimizing collateral routines through continuous service improvements."
       ],
       "stacks": [
         "C#",
         ".NET",
         "ASP.NET Core",
         "SOLID",
+        "DDD",
+        "CQRS",
         "Clean Architecture",
         "Microservices",
-        "Event-Driven",
-        "CQRS",
+        "Event-Driven Architecture",
+        "EF Core",
         "MySQL",
         "Redis",
+        "REST APIs",
+        "SOAP",
+        "GraphQL",
         "RabbitMQ",
         "AWS SQS/SNS",
+        "JWT",
+        "OAuth 2.0",
+        "OpenID Connect",
+        "xUnit",
+        "Moq",
+        "Fluent Assertions",
+        "TDD",
         "Docker",
         "Kubernetes",
-        "AWS Lambda Functions"
+        "AWS",
+        "Azure DevOps",
+        "CloudWatch"
       ],
       "display": {
         "screen": true,
@@ -120,10 +134,10 @@
         "longDate": "May 2023 - Abr 2025"
       },
       "responsabilities": [
-        "Developed AI-powered chatbots with ASP.NET Core and the OpenAI API, automating user interactions and integrating workflows.",
-        "Built and maintained internal and external RESTful APIs, enabling secure and reliable system integration.",
-        "Optimized RabbitMQ message handling, reducing dead-letter queue bottlenecks by 60%, improving responsiveness and efficiency.",
-        "Implemented CI/CD pipelines with Jenkins and Docker, streamlining deployments and boosting scalability."
+        "Developed AI-powered chatbots using ASP.NET Core and the OpenAI API to automate customer interactions for credit recovery operations, reducing manual outreach and streamlining collection workflows.",
+        "Built and maintained RESTful APIs integrating dialer platforms (Olos, Aspect) and client systems, enabling automated and reliable communication flows across the platform.",
+        "Optimized RabbitMQ message handling, eliminating dead-letter queue bottlenecks and significantly improving system responsiveness and reliability.",
+        "Maintained and optimized MySQL database operations to store and manage customer interaction data, including payment intentions, confirmations, and call outcomes — supporting the core revenue pipeline and processing 100K+ records per client monthly."
       ],
       "stacks": [
         "C#",
@@ -156,10 +170,9 @@
         "longDate": "Aug 2021 - Dec 2022"
       },
       "responsabilities": [
-        "Contributed to applications using IBM Watson Assistant, IBM Cloud, and IBM Storage.",
-        "Built software components in C#, applying object-oriented principles for clarity and scalability.",
-        "Implemented CRUD operations and improved data management with SQL Server and Entity Framework Core in ASP.NET Core.",
-        "Collaborated in Agile sprints, gaining hands-on experience in planning, execution, and code reviews."
+        "Developed an IBM Watson Assistant-powered chatbot integrated into a disguised pizzeria landing page, enabling domestic violence victims to discreetly request police assistance — turning a simulated order flow into a confidential emergency reporting system.",
+        "Built and maintained ASP.NET Core applications with C#, implementing CRUD operations and data management using SQL Server and Entity Framework Core.",
+        "Collaborated in Agile sprints, contributing to planning, execution, and code reviews while applying object-oriented principles in real-world projects."
       ],
       "stacks": [
         "C#",

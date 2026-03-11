@@ -1,0 +1,44 @@
+﻿<SectionContainer Visibility="PrintVisibility.Visible">
+    <SectionHeading Title="Education"
+                    AriaLabel="Education Section"
+                    Size="TextSize.Xl"
+                    Style="SectionHeading.PrintStyle.Divider"
+                    Visibility="PrintVisibility.Visible" />
+
+    <header class="flex flex-col items-start">
+        <div class="grid w-full grid-cols-[1fr_auto] place-items-baseline gap-3">
+            <SectionHeading Title=@Education.Degree
+                            AriaLabel=@Education.Degree
+                            Size="TextSize.Md"
+                            Style="SectionHeading.PrintStyle.None"
+                            Visibility="PrintVisibility.Visible"
+                            Color="TextColor.Default" />
+            <span class="hidden sm:block">
+                <TextElement Title="@Education.Duration.LongDate"
+                             AriaLabel="@Education.Duration.LongDate"
+                             Type="TextElement.ElementType.Paragraph"
+                             Visibility="PrintVisibility.Visible"
+                             Size="TextSize.Sm"
+                             Context="TextElement.TextContext.Date" />
+            </span>
+
+            <span class="block sm:hidden print:hidden">
+                <TextElement Title="@Education.Duration.ShortDate"
+                             AriaLabel="@Education.Duration.ShortDate"
+                             Type="TextElement.ElementType.Paragraph"
+                             Visibility="PrintVisibility.Visible"
+                             Size="TextSize.Sm"
+                             Context="TextElement.TextContext.Date" />
+            </span>
+        </div>
+        <NavigationLink Title=@Education.Institution.Name
+                        AriaLabel=@Education.Institution.Name
+                        Url=@Education.Institution.Url />
+    </header>
+</SectionContainer>
+
+
+@code {
+
+    [EditorRequired][Parameter] public Education Education { get; set; } = default!;
+}

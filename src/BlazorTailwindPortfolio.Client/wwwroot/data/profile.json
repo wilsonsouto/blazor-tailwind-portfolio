@@ -174,5 +174,16 @@
         "print": true
       }
     }
-  ]
+  ],
+  "education": {
+    "institution": {
+      "name": "FIAP",
+      "url": "https://www.fiap.com.br/"
+    },
+    "duration": {
+      "shortDate": "2021 - 2022",
+      "longDate": "Jan 2021 - Dez 2022"
+    },
+    "degree": " Associate's Degree in Systems Analysis and Development"
+  }
 }

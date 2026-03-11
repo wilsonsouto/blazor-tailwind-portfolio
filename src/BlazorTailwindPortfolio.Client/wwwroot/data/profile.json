@@ -97,30 +97,22 @@
         "Clean Architecture",
         "Microservices",
         "Event-Driven Architecture",
-        "EF Core",
+        "Dapper",
         "MySQL",
         "Redis",
         "REST APIs",
-        "SOAP",
-        "GraphQL",
         "RabbitMQ",
-        "AWS SQS/SNS",
         "JWT",
         "OAuth 2.0",
         "OpenID Connect",
-        "xUnit",
-        "Moq",
-        "Fluent Assertions",
         "TDD",
         "Docker",
         "Kubernetes",
-        "AWS",
-        "Azure DevOps",
-        "CloudWatch"
+        "AWS"
       ],
-      "display": {
-        "screen": true,
-        "print": true
+      "displayOptions": {
+        "visibleOnPrint": true,
+        "visibleOnScreen": true
       }
     },
     {
@@ -144,19 +136,21 @@
         ".NET",
         "ASP.NET Core",
         "SOLID",
+        "DDD",
         "Clean Architecture",
+        "Dapper",
         "MySQL",
         "Redis",
+        "REST APIs",
         "RabbitMQ",
+        "TDD",
         "Docker",
         "Kubernetes",
-        "Jenkins",
-        "Grafana",
-        "Kibana"
+        "Grafana"
       ],
-      "display": {
-        "screen": true,
-        "print": true
+      "displayOptions": {
+        "visibleOnPrint": true,
+        "visibleOnScreen": true
       }
     },
     {
@@ -178,13 +172,12 @@
         "C#",
         ".NET",
         "ASP.NET Core",
-        "SQL Server",
-        "HTML",
-        "CSS"
+        "Entity Framework Core",
+        "SQL Server"
       ],
-      "display": {
-        "screen": true,
-        "print": true
+      "displayOptions": {
+        "visibleOnPrint": false,
+        "visibleOnScreen": true
       }
     }
   ],
@@ -197,6 +190,6 @@
       "shortDate": "2021 - 2022",
       "longDate": "Jan 2021 - Dez 2022"
     },
-    "degree": " Associate's Degree in Systems Analysis and Development"
+    "degree": "Associate's Degree in Systems Analysis and Development"
   }
 }

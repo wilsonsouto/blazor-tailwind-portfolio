@@ -87,7 +87,7 @@
         "Built and supported workflows for stocks, funds, government and corporate bonds, ensuring accurate collateral management and regulatory compliance across custodians.",
         "Collaborated with operations to troubleshoot issues and prioritize demands by business impact, reducing bugs and optimizing collateral routines through continuous service improvements."
       ],
-      "stacks": [
+      "stack": [
         "C#",
         ".NET",
         "ASP.NET Core",
@@ -131,7 +131,7 @@
         "Optimized RabbitMQ message handling, eliminating dead-letter queue bottlenecks and significantly improving system responsiveness and reliability.",
         "Maintained and optimized MySQL database operations to store and manage customer interaction data, including payment intentions, confirmations, and call outcomes — supporting the core revenue pipeline and processing 100K+ records per client monthly."
       ],
-      "stacks": [
+      "stack": [
         "C#",
         ".NET",
         "ASP.NET Core",
@@ -168,12 +168,13 @@
         "Built and maintained ASP.NET Core applications with C#, implementing CRUD operations and data management using SQL Server and Entity Framework Core.",
         "Collaborated in Agile sprints, contributing to planning, execution, and code reviews while applying object-oriented principles in real-world projects."
       ],
-      "stacks": [
+      "stack": [
         "C#",
         ".NET",
         "ASP.NET Core",
         "Entity Framework Core",
-        "SQL Server"
+        "SQL Server",
+        "REST APIs"
       ],
       "displayOptions": {
         "visibleOnPrint": false,

@@ -1,7 +1,7 @@
 ﻿{
   "identity": {
     "name": "Wilson Souto",
-    "description": "Software Developer focused on delivering value by solving problems and building solutions",
+    "description": "Backend Developer | C# | .NET | AWS @ BTG Pactual",
     "location": {
       "place": "São Paulo, SP, Brazil",
       "url": "https://www.google.com/maps/place/S%C3%A3o+Paulo"
@@ -69,14 +69,14 @@
     ],
     "profilePicture": "images/profile-picture.jpeg"
   },
-  "introduction": "Software Developer focused on delivering value by solving problems and building solutions. Strong communication, continuous learning, and teamwork skills. Experience in technology consulting, AI, and finance — driving business success.",
+  "introduction": "Backend Developer focused on delivering value by solving problems and building solutions. Strong communication, continuous learning, and teamwork skills. Experience in technology consulting, AI, and finance — driving business success.",
   "workExperiences": [
     {
       "company": {
         "name": "BTG Pactual",
         "url": "https://www.btgpactual.com/"
       },
-      "role": "Mid Level Software Developer",
+      "role": "Mid Level Backend Developer",
       "duration": {
         "shortDate": "2025 - Present",
         "longDate": "Apr 2025 - Present"
@@ -126,7 +126,7 @@
         "name": "Intervalor",
         "url": "https://intervalor.com.br/"
       },
-      "role": "Junior Software Developer",
+      "role": "Junior Backend Developer",
       "duration": {
         "shortDate": "2023 - 2025",
         "longDate": "May 2023 - Abr 2025"

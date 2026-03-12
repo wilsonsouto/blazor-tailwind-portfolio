@@ -92,23 +92,29 @@
         ".NET",
         "ASP.NET Core",
         "SOLID",
-        "DDD",
+        "Domain-Driven Design (DDD)",
         "CQRS",
         "Clean Architecture",
         "Microservices",
-        "Event-Driven Architecture",
+        "Event-driven Architecture",
         "Dapper",
         "MySQL",
         "Redis",
         "REST APIs",
+        "SOAP",
+        "GraphQL",
         "RabbitMQ",
         "JWT",
         "OAuth 2.0",
         "OpenID Connect",
-        "TDD",
+        "xUnit",
+        "Moq",
+        "Fluent Assertions",
+        "Test-Driven Development (TDD)",
         "Docker",
         "Kubernetes",
-        "AWS"
+        "Amazon Web Services (AWS)",
+        "Azure DevOps"
       ],
       "displayOptions": {
         "visibleOnPrint": true,
@@ -136,14 +142,19 @@
         ".NET",
         "ASP.NET Core",
         "SOLID",
-        "DDD",
+        "Domain-Driven Design (DDD)",
         "Clean Architecture",
         "Dapper",
         "MySQL",
         "Redis",
         "REST APIs",
+        "GraphQL",
         "RabbitMQ",
-        "TDD",
+        "JWT",
+        "xUnit",
+        "Moq",
+        "Fluent Assertions",
+        "Test-Driven Development (TDD)",
         "Docker",
         "Kubernetes",
         "Grafana"
@@ -208,11 +219,11 @@
     },
     {
       "topic": "Data and Caching",
-      "stack": [ "EF Core", "Dapper", "SQL Server", "PostgreSQL", "MySQL", "Redis" ]
+      "stack": [ "ORMs (EF Core, Dapper)", "SQL (SQL Server, PostgreSQL, MySQL)", "Redis"]
     },
     {
       "topic": "Integration and Messaging",
-      "stack": [ "REST APIs", "SOAP", "GraphQL", "RabbitMQ", "AWS SQS/SNS" ]
+      "stack": [ "APIs (REST, SOAP, GraphQL)", "RabbitMQ", "AWS SQS/SNS" ]
     },
     {
       "topic": "Security",

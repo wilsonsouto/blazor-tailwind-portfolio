@@ -6,39 +6,39 @@
                     Visibility="PrintVisibility.Visible" />
     @foreach (var experience in WorkExperiences)
     {
-        <article class="@AddClasses(experience)">
+        var currentExperience = experience;
+        <article class="@AddClasses(currentExperience)">
             <header class="flex flex-col items-start">
                 <div class="grid w-full grid-cols-[1fr_auto] place-items-baseline gap-3">
-                    <SectionHeading Title=@experience.Role
-                                    AriaLabel=@experience.Role
+                    <SectionHeading Title=@currentExperience.Role
+                                    AriaLabel=@currentExperience.Role
                                     Size="TextSize.Md"
                                     Style="SectionHeading.PrintStyle.None"
                                     Visibility="PrintVisibility.Visible"
                                     Color="TextColor.Default" />
                     <span class="hidden sm:block">
-                        <TextElement Title="@experience.Duration.LongDate"
-                                     AriaLabel="@experience.Duration.LongDate"
+                        <TextElement Title="@currentExperience.Duration.LongDate"
+                                     AriaLabel="@currentExperience.Duration.LongDate"
                                      Type="TextElement.ElementType.Paragraph"
                                      Visibility="PrintVisibility.Visible"
                                      Size="TextSize.Sm"
                                      Context="TextElement.TextContext.Date" />
                     </span>
-
                     <span class="block sm:hidden print:hidden">
-                        <TextElement Title="@experience.Duration.ShortDate"
-                                     AriaLabel="@experience.Duration.ShortDate"
+                        <TextElement Title="@currentExperience.Duration.ShortDate"
+                                     AriaLabel="@currentExperience.Duration.ShortDate"
                                      Type="TextElement.ElementType.Paragraph"
                                      Visibility="PrintVisibility.Visible"
                                      Size="TextSize.Sm"
                                      Context="TextElement.TextContext.Date" />
                     </span>
                 </div>
-            <NavigationLink Title=@experience.Company.Name
-                            AriaLabel=@experience.Company.Name
-                            Url=@experience.Company.Url />
+                <NavigationLink Title=@currentExperience.Company.Name
+                                AriaLabel=@currentExperience.Company.Name
+                                Url=@currentExperience.Company.Url />
             </header>
             <ul class="list-inside list-disc">
-                @foreach (var responsibility in experience.Responsabilities)
+                @foreach (var responsibility in currentExperience.Responsabilities)
                 {
                     <TextElement Title=@responsibility
                                  AriaLabel=@responsibility
@@ -48,7 +48,7 @@
                 }
             </ul>
             <ul class="flex flex-grow list-none flex-wrap gap-1 print:hidden">
-                @foreach (var stack in experience.Stack)
+                @foreach (var stack in (expandedStacks.Contains(currentExperience.Role) ? currentExperience.Stack : currentExperience.Stack.Take(6)))
                 {
                     <TextElement Title=@stack
                                  AriaLabel=@stack
@@ -60,6 +60,13 @@
                                  Weight="FontWeight.Bold" />
                 }
             </ul>
+            @if (currentExperience.Stack.Length > 6)
+            {
+                <button @onclick="() => ToggleStacks(currentExperience.Role)"
+                        class="my-2 text-xs text-neutral-400 hover:text-neutral-300 font-charis cursor-pointer print:hidden">
+                        @(expandedStacks.Contains(currentExperience.Role) ? "Collapse ▲" : $"Show {currentExperience.Stack.Length - 6} more ▼")
+                </button>
+            }
         </article>
     }
 </SectionContainer>
@@ -67,13 +74,21 @@
 @code {
     [EditorRequired][Parameter] public List<WorkExperience> WorkExperiences { get; set; } = default!;
 
+    private HashSet<string> expandedStacks = new();
+
+    private void ToggleStacks(string role)
+    {
+        if (!expandedStacks.Add(role))
+            expandedStacks.Remove(role);
+    }
+
     private string AddClasses(WorkExperience experience)
     {
         var classes = new List<string> { "flex flex-col gap-1.5" };
-        
+
         if (!experience.DisplayOptions.VisibleOnScreen) classes.Add("screen:hidden");
         if (!experience.DisplayOptions.VisibleOnPrint) classes.Add("print:hidden");
-        
+
         return string.Join(" ", classes);
     }
 }

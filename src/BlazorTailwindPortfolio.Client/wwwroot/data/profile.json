@@ -192,5 +192,43 @@
       "longDate": "Jan 2021 - Dez 2022"
     },
     "degree": "Associate's Degree in Systems Analysis and Development"
-  }
+  },
+  "skills": [
+    {
+      "topic": "Languages and Frameworks",
+      "stack": [ "C#", ".NET", "ASP.NET Core" ]
+    },
+    {
+      "topic": "Design and Patterns",
+      "stack": [ "SOLID", "DDD", "CQRS" ]
+    },
+    {
+      "topic": "Architectures",
+      "stack": [ "Clean Architecture", "Microservices", "Event-Driven" ]
+    },
+    {
+      "topic": "Data and Caching",
+      "stack": [ "EF Core", "Dapper", "SQL Server", "PostgreSQL", "MySQL", "Redis" ]
+    },
+    {
+      "topic": "Integration and Messaging",
+      "stack": [ "REST APIs", "SOAP", "GraphQL", "RabbitMQ", "AWS SQS/SNS" ]
+    },
+    {
+      "topic": "Security",
+      "stack": [ "JWT", "OAuth 2.0", "OpenID Connect" ]
+    },
+    {
+      "topic": "Testing",
+      "stack": [ "xUnit", "Moq", "Fluent Assertions", "TDD" ]
+    },
+    {
+      "topic": "Cloud and DevOps",
+      "stack": [ "Docker", "Kubernetes", "AWS", "Azure DevOps" ]
+    },
+    {
+      "topic": "Observability",
+      "stack": [ "Grafana", "CloudWatch" ]
+    }
+  ]
 }

@@ -1,0 +1,66 @@
+﻿<SectionContainer Visibility="PrintVisibility.Visible">
+    <SectionHeading Title="Skills"
+                    AriaLabel="Skills Section"
+                    Size="TextSize.Xl"
+                    Style="SectionHeading.PrintStyle.Divider" />
+    <nav>
+        <div class="flex-col gap-1.5 not-print:flex print:hidden">
+            @foreach (var skill in Skills)
+            {
+                var currentSkill = skill;
+                <button @onclick="() => ToggleSkill(currentSkill.Topic)"
+                        class="text-background flex w-full cursor-pointer items-center justify-between rounded-md bg-neutral-700 px-4 py-2 text-left hover:bg-neutral-600">
+                    <span aria-label="@currentSkill.Topic">@currentSkill.Topic</span>
+                    <i class="fa @(expandedSkills.Contains(currentSkill.Topic) ? "fa-arrow-up" : "fa-arrow-down")"></i>
+                </button>
+
+                if (expandedSkills.Contains(currentSkill.Topic))
+                {
+                    <ul class="ml-6">
+                        @foreach (var stack in currentSkill.Stack)
+                        {
+                            <TextElement Title=@stack
+                                         AriaLabel=@stack
+                                         Type="TextElement.ElementType.ListItem"
+                                         Visibility="PrintVisibility.Visible"
+                                         Size="TextSize.Md"
+                                         Weight="FontWeight.Bold"/>
+                        }
+                    </ul>
+                }
+            }
+        </div>
+        <ul class="not-print:hidden print:block">
+            @foreach (var skill in Skills)
+            {
+                <TextElement Title=@skill.Topic
+                             AriaLabel=@skill.Topic
+                             Type="TextElement.ElementType.ListItem"
+                             Visibility="PrintVisibility.Visible"
+                             Size="TextSize.Md"
+                             Weight="FontWeight.Bold"/>
+
+                    var stack = string.Join(", ", skill.Stack);
+
+                    <TextElement Title=@stack
+                                 AriaLabel=@stack
+                                 Type="TextElement.ElementType.ListItem"
+                                 Visibility="PrintVisibility.Visible"
+                                 Size="TextSize.Md"
+                                 Weight="FontWeight.Normal"/>
+            }
+        </ul>
+    </nav>
+</SectionContainer>
+
+@code {
+    [EditorRequired][Parameter] public List<Skills> Skills { get; set; } = default!;
+
+    private HashSet<string> expandedSkills = new();
+
+    private void ToggleSkill(string topic)
+    {
+        if (!expandedSkills.Add(topic))
+            expandedSkills.Remove(topic);
+    }
+}

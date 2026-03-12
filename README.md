@@ -11,7 +11,7 @@
 
 ## About
 
-Built with Blazor WebAssembly (WASM) and Tailwind CSS — running entirely in the browser via WebAssembly, no server-side rendering required.
+Built with Blazor WebAssembly (WASM) and Tailwind CSS — running entirely in the browser, no server-side rendering required.
 
 > **Why Blazor?** As a .NET developer, Blazor was a natural choice, it allows me to build interactive web UIs using C# instead of JavaScript, keeping the entire stack in a single language and ecosystem. Combined with Tailwind CSS for utility-first styling, it results in a fast, modern, and consistent experience.
 

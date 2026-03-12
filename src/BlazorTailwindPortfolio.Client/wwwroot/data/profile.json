@@ -1,7 +1,7 @@
 ﻿{
   "identity": {
     "name": "Wilson Souto",
-    "description": "Software Developer focused on generating value by solving problems and building solutions",
+    "description": "Software Developer focused on delivering value by solving problems and building solutions",
     "location": {
       "place": "São Paulo, SP, Brazil",
       "url": "https://www.google.com/maps/place/S%C3%A3o+Paulo"
@@ -219,7 +219,7 @@
     },
     {
       "topic": "Data and Caching",
-      "stack": [ "ORMs (EF Core, Dapper)", "SQL (SQL Server, PostgreSQL, MySQL)", "Redis"]
+      "stack": [ "ORMs (EF Core, Dapper)", "SQL (SQL Server, PostgreSQL, MySQL)", "Redis" ]
     },
     {
       "topic": "Integration and Messaging",

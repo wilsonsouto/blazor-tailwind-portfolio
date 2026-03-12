@@ -33,21 +33,23 @@
         <ul class="not-print:hidden print:block">
             @foreach (var skill in Skills)
             {
-                <TextElement Title=@skill.Topic
-                             AriaLabel=@skill.Topic
+               var topic = $"{skill.Topic}:";
+
+               <TextElement Title=@topic
+                            AriaLabel=@topic
+                            Type="TextElement.ElementType.ListItem"
+                            Visibility="PrintVisibility.Visible"
+                            Size="TextSize.Md"
+                            Weight="FontWeight.Bold"/>
+
+                var stack = string.Join(", ", skill.Stack);
+
+                <TextElement Title=@stack
+                             AriaLabel=@stack
                              Type="TextElement.ElementType.ListItem"
                              Visibility="PrintVisibility.Visible"
                              Size="TextSize.Md"
-                             Weight="FontWeight.Bold"/>
-
-                    var stack = string.Join(", ", skill.Stack);
-
-                    <TextElement Title=@stack
-                                 AriaLabel=@stack
-                                 Type="TextElement.ElementType.ListItem"
-                                 Visibility="PrintVisibility.Visible"
-                                 Size="TextSize.Md"
-                                 Weight="FontWeight.Normal"/>
+                             Weight="FontWeight.Normal"/>
             }
         </ul>
     </nav>

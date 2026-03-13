@@ -11,10 +11,10 @@
                 <button @onclick="() => ToggleSkill(currentSkill.Topic)"
                         class="text-background flex w-full cursor-pointer items-center justify-between rounded-md bg-neutral-700 px-4 py-2 text-left hover:bg-neutral-600">
                     <span aria-label="@currentSkill.Topic">@currentSkill.Topic</span>
-                    <i class="fa @(expandedSkills.Contains(currentSkill.Topic) ? "fa-arrow-up" : "fa-arrow-down")"></i>
+                    <i class="fa @(expandedSkillsItems.Contains(currentSkill.Topic) ? "fa-arrow-up" : "fa-arrow-down")"></i>
                 </button>
 
-                if (expandedSkills.Contains(currentSkill.Topic))
+                if (expandedSkillsItems.Contains(currentSkill.Topic))
                 {
                     <ul class="ml-6">
                         @foreach (var stack in currentSkill.Stack)
@@ -58,11 +58,11 @@
 @code {
     [EditorRequired][Parameter] public List<Skills> Skills { get; set; } = default!;
 
-    private HashSet<string> expandedSkills = new();
+    private HashSet<string> expandedSkillsItems = new();
 
     private void ToggleSkill(string topic)
     {
-        if (!expandedSkills.Add(topic))
-            expandedSkills.Remove(topic);
+        if (!expandedSkillsItems.Add(topic))
+            expandedSkillsItems.Remove(topic);
     }
 }

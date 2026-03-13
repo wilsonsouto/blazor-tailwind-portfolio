@@ -48,7 +48,7 @@
                 }
             </ul>
             <ul class="flex flex-grow list-none flex-wrap gap-1 print:hidden">
-                @foreach (var stack in (expandedStacks.Contains(currentExperience.Role) ? currentExperience.Stack : currentExperience.Stack.Take(6)))
+                @foreach (var stack in (expandedStackItems.Contains(currentExperience.Role) ? currentExperience.Stack : currentExperience.Stack.Take(6)))
                 {
                     <TextElement Title=@stack
                                  AriaLabel=@stack
@@ -62,9 +62,9 @@
             </ul>
             @if (currentExperience.Stack.Length > 6)
             {
-                <button @onclick="() => ToggleStacks(currentExperience.Role)"
+                <button @onclick="() => ToggleStack(currentExperience.Role)"
                         class="my-2 text-xs text-neutral-400 hover:text-neutral-300 font-charis cursor-pointer print:hidden">
-                        @(expandedStacks.Contains(currentExperience.Role) ? "Collapse ▲" : $"Show {currentExperience.Stack.Length - 6} more ▼")
+                        @(expandedStackItems.Contains(currentExperience.Role) ? "Collapse ▲" : $"Show {currentExperience.Stack.Length - 6} more ▼")
                 </button>
             }
         </article>
@@ -74,12 +74,12 @@
 @code {
     [EditorRequired][Parameter] public List<WorkExperience> WorkExperiences { get; set; } = default!;
 
-    private HashSet<string> expandedStacks = new();
+    private HashSet<string> expandedStackItems = new();
 
-    private void ToggleStacks(string role)
+    private void ToggleStack(string role)
     {
-        if (!expandedStacks.Add(role))
-            expandedStacks.Remove(role);
+        if (!expandedStackItems.Add(role))
+            expandedStackItems.Remove(role);
     }
 
     private string AddClasses(WorkExperience experience)

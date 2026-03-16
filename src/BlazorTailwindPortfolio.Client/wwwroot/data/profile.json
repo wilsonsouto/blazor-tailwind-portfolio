@@ -82,10 +82,10 @@
         "longDate": "Apr 2025 - Present"
       },
       "responsabilities": [
-        "Developed and maintained systems for the Collateral OTC team, including collateral asset allocation and withdrawal, derivatives processing (swaps, options, NDFs), and margin and box calculations — handling over 28K daily trade positions.",
-        "Migrated 80% of legacy systems to .NET 8, refactoring into microservices and deploying on cloud infrastructure, significantly reducing system failures and increasing scalability and resilience.",
-        "Built and supported workflows for stocks, funds, government and corporate bonds, ensuring accurate collateral management and regulatory compliance across custodians.",
-        "Collaborated with operations to troubleshoot issues and prioritize demands by business impact, reducing bugs and optimizing collateral routines through continuous service improvements."
+        "Developed systems for the Collateral OTC team, including collateral asset allocation and withdrawal, derivatives processing (swaps, options, NDFs), and margin and box calculations — handling over 28K daily trade positions.",
+        "Migrated 80% of legacy systems to .NET 8, refactoring into microservices and deploying on cloud infrastructure, increasing scalability and resilience.",
+        "Supported workflows for stocks, funds, government and corporate bonds, ensuring regulatory compliance across custodians.",
+        "Collaborated with operations to troubleshoot issues and prioritize demands by business impact, reducing bugs and optimizing routines."
       ],
       "stack": [
         "C#",
@@ -132,10 +132,10 @@
         "longDate": "May 2023 - Abr 2025"
       },
       "responsabilities": [
-        "Developed AI-powered chatbots using ASP.NET Core and the OpenAI API to automate customer interactions for credit recovery operations, reducing manual outreach and streamlining collection workflows.",
-        "Built and maintained RESTful APIs integrating dialer platforms (Olos, Aspect) and client systems, enabling automated and reliable communication flows across the platform.",
+        "Developed AI-powered chatbots using ASP.NET Core and the OpenAI API to automate customer interactions for credit recovery operations, streamlining collection workflows.",
+        "Integrated dialer platforms (Olos, Aspect) with client systems via RESTful APIs, supporting end-to-end communication.",
         "Optimized RabbitMQ message handling, eliminating dead-letter queue bottlenecks and significantly improving system responsiveness and reliability.",
-        "Maintained and optimized MySQL database operations to store and manage customer interaction data, including payment intentions, confirmations, and call outcomes — supporting the core revenue pipeline and processing 100K+ records per client monthly."
+        "Managed MySQL database operations for customer interaction data — supporting the core revenue pipeline and processing 100K+ records per client monthly."
       ],
       "stack": [
         "C#",
@@ -175,9 +175,9 @@
         "longDate": "Aug 2021 - Dec 2022"
       },
       "responsabilities": [
-        "Developed an IBM Watson Assistant-powered chatbot integrated into a disguised pizzeria landing page, enabling domestic violence victims to discreetly request police assistance — turning a simulated order flow into a confidential emergency reporting system.",
-        "Built and maintained ASP.NET Core applications with C#, implementing CRUD operations and data management using SQL Server and Entity Framework Core.",
-        "Collaborated in Agile sprints, contributing to planning, execution, and code reviews while applying object-oriented principles in real-world projects."
+        "Developed an IBM Watson Assistant-powered chatbot integrated into a pizzeria landing page, enabling domestic violence victims to discreetly request police assistance — turning a simulated order flow into a confidential emergency reporting system.",
+        "Gained hands-on experience with ASP.NET Core and C#, implementing CRUD operations with SQL Server and Entity Framework Core.",
+        "Collaborated in Agile sprints, contributing to planning, execution, and code reviews."
       ],
       "stack": [
         "C#",

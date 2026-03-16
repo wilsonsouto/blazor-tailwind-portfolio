@@ -1,0 +1,245 @@
+﻿{
+  "identity": {
+    "name": "Wilson Souto",
+    "description": "Software Developer",
+    "location": {
+      "place": "São Paulo, SP, Brazil",
+      "url": "https://www.google.com/maps/place/S%C3%A3o+Paulo"
+    },
+    "contactLinks": [
+      {
+        "label": "Portfolio",
+        "url": "https://wilsonsouto.github.io/portfolio/",
+        "icon": "fa-solid fa-briefcase",
+        "type": 0,
+        "displayOptions": {
+          "visibleOnPrint": false,
+          "visibleOnScreen": true
+        }
+      },
+      {
+        "label": "Email",
+        "url": "mailto:wilsonsouto@outlook.com.br",
+        "icon": "fa-solid fa-envelope",
+        "type": 0,
+        "displayOptions": {
+          "visibleOnPrint": true,
+          "visibleOnScreen": true
+        }
+      },
+      {
+        "label": "Mobile",
+        "url": "tel:+5511941862376",
+        "icon": "fa-solid fa-phone",
+        "type": 0,
+        "displayOptions": {
+          "visibleOnPrint": true,
+          "visibleOnScreen": true
+        }
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/wilsonsouto",
+        "icon": "fa-brands fa-github",
+        "type": 0,
+        "displayOptions": {
+          "visibleOnPrint": true,
+          "visibleOnScreen": true
+        }
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://linkedin.com/in/wilsonsouto",
+        "icon": "fa-brands fa-linkedin-in",
+        "type": 0,
+        "displayOptions": {
+          "visibleOnPrint": true,
+          "visibleOnScreen": true
+        }
+      },
+      {
+        "label": "Resume",
+        "icon": "fa-solid fa-file-pdf",
+        "type": 1,
+        "displayOptions": {
+          "visibleOnPrint": true,
+          "visibleOnScreen": false
+        }
+      }
+    ],
+    "profilePicture": "images/profile-picture.jpeg"
+  },
+  "introduction": "Software Developer focused on delivering value by solving problems and building solutions. Strong communication, continuous learning, and teamwork skills. Experience in technology consulting, AI, and finance — driving business success.",
+  "workExperiences": [
+    {
+      "company": {
+        "name": "BTG Pactual",
+        "url": "https://www.btgpactual.com/"
+      },
+      "role": "Mid Level Software Developer",
+      "duration": {
+        "shortDate": "2025 - Present",
+        "longDate": "Apr 2025 - Present"
+      },
+      "responsabilities": [
+        "Developed systems for the Collateral OTC team, including collateral asset allocation and withdrawal, derivatives processing (swaps, options, NDFs), and margin and box calculations — handling over 28K daily trade positions.",
+        "Migrated 80% of legacy systems to .NET 8, refactoring into microservices and deploying on cloud infrastructure, increasing scalability and resilience.",
+        "Supported workflows for stocks, funds, government and corporate bonds, ensuring regulatory compliance across custodians.",
+        "Collaborated with operations to troubleshoot issues and prioritize demands by business impact, reducing bugs and optimizing routines."
+      ],
+      "stack": [
+        "C#",
+        ".NET",
+        "ASP.NET Core",
+        "SOLID",
+        "Domain-Driven Design (DDD)",
+        "CQRS",
+        "Clean Architecture",
+        "Microservices",
+        "Event-driven Architecture",
+        "Dapper",
+        "MySQL",
+        "Redis",
+        "REST APIs",
+        "SOAP",
+        "GraphQL",
+        "RabbitMQ",
+        "JWT",
+        "OAuth 2.0",
+        "OpenID Connect",
+        "xUnit",
+        "Moq",
+        "Fluent Assertions",
+        "Test-Driven Development (TDD)",
+        "Docker",
+        "Kubernetes",
+        "Amazon Web Services (AWS)",
+        "Azure DevOps"
+      ],
+      "displayOptions": {
+        "visibleOnPrint": true,
+        "visibleOnScreen": true
+      }
+    },
+    {
+      "company": {
+        "name": "Intervalor",
+        "url": "https://intervalor.com.br/"
+      },
+      "role": "Junior Software Developer",
+      "duration": {
+        "shortDate": "2023 - 2025",
+        "longDate": "May 2023 - Abr 2025"
+      },
+      "responsabilities": [
+        "Developed AI-powered chatbots using ASP.NET Core and the OpenAI API to automate customer interactions for credit recovery operations, streamlining collection workflows.",
+        "Integrated dialer platforms (Olos, Aspect) with client systems via RESTful APIs, supporting end-to-end communication.",
+        "Optimized RabbitMQ message handling, eliminating dead-letter queue bottlenecks and significantly improving system responsiveness and reliability.",
+        "Managed MySQL database operations for customer interaction data — supporting the core revenue pipeline and processing 100K+ records per client monthly."
+      ],
+      "stack": [
+        "C#",
+        ".NET",
+        "ASP.NET Core",
+        "SOLID",
+        "Domain-Driven Design (DDD)",
+        "Clean Architecture",
+        "Dapper",
+        "MySQL",
+        "Redis",
+        "REST APIs",
+        "GraphQL",
+        "RabbitMQ",
+        "JWT",
+        "xUnit",
+        "Moq",
+        "Fluent Assertions",
+        "Test-Driven Development (TDD)",
+        "Docker",
+        "Kubernetes",
+        "Grafana"
+      ],
+      "displayOptions": {
+        "visibleOnPrint": true,
+        "visibleOnScreen": true
+      }
+    },
+    {
+      "company": {
+        "name": "IBM",
+        "url": "https://www.ibm.com/us-en"
+      },
+      "role": "Software Developer Intern",
+      "duration": {
+        "shortDate": "2021 - 2022",
+        "longDate": "Aug 2021 - Dec 2022"
+      },
+      "responsabilities": [
+        "Developed an IBM Watson Assistant-powered chatbot integrated into a pizzeria landing page, enabling domestic violence victims to discreetly request police assistance — turning a simulated order flow into a confidential emergency reporting system.",
+        "Gained hands-on experience with ASP.NET Core and C#, implementing CRUD operations with SQL Server and Entity Framework Core.",
+        "Collaborated in Agile sprints, contributing to planning, execution, and code reviews."
+      ],
+      "stack": [
+        "C#",
+        ".NET",
+        "ASP.NET Core",
+        "Entity Framework Core",
+        "SQL Server",
+        "REST APIs"
+      ],
+      "displayOptions": {
+        "visibleOnPrint": false,
+        "visibleOnScreen": true
+      }
+    }
+  ],
+  "education": {
+    "institution": {
+      "name": "FIAP",
+      "url": "https://www.fiap.com.br/"
+    },
+    "duration": {
+      "shortDate": "2021 - 2022",
+      "longDate": "Jan 2021 - Dez 2022"
+    },
+    "degree": "Associate's Degree in Systems Analysis and Development"
+  },
+  "skills": [
+    {
+      "topic": "Languages and Frameworks",
+      "stack": [ "C#", ".NET", "ASP.NET Core" ]
+    },
+    {
+      "topic": "Design and Patterns",
+      "stack": [ "SOLID", "DDD", "CQRS" ]
+    },
+    {
+      "topic": "Architectures",
+      "stack": [ "Clean Architecture", "Microservices", "Event-Driven" ]
+    },
+    {
+      "topic": "Data and Caching",
+      "stack": [ "ORMs (EF Core, Dapper)", "SQL (SQL Server, PostgreSQL, MySQL)", "Redis" ]
+    },
+    {
+      "topic": "Integration and Messaging",
+      "stack": [ "APIs (REST, SOAP, GraphQL)", "RabbitMQ", "AWS SQS/SNS" ]
+    },
+    {
+      "topic": "Security",
+      "stack": [ "JWT", "OAuth 2.0", "OpenID Connect" ]
+    },
+    {
+      "topic": "Testing",
+      "stack": [ "xUnit", "Moq", "Fluent Assertions", "TDD" ]
+    },
+    {
+      "topic": "Cloud and DevOps",
+      "stack": [ "Docker", "Kubernetes", "AWS", "Azure DevOps" ]
+    },
+    {
+      "topic": "Observability",
+      "stack": [ "Grafana", "CloudWatch" ]
+    }
+  ]
+}

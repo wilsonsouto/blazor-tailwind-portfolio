@@ -19,18 +19,8 @@
       },
       {
         "label": "Email",
-        "url": "mailto:wilsonsouto@outlook.com.br",
+        "url": "mailto:wilson_souto@icloud.com",
         "icon": "fa-solid fa-envelope",
-        "type": 0,
-        "displayOptions": {
-          "visibleOnPrint": true,
-          "visibleOnScreen": true
-        }
-      },
-      {
-        "label": "Mobile",
-        "url": "tel:+5511941862376",
-        "icon": "fa-solid fa-phone",
         "type": 0,
         "displayOptions": {
           "visibleOnPrint": true,
